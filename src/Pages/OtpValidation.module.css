@@ -1,0 +1,231 @@
+.form {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    --tomato: #fa5656;
+    font-family: Helvetica, sans-serif;
+    border: 2px solid var(--glow-color);
+    padding: 25px;
+    display: flex;
+    max-width: 420px;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: var(--night-rider);
+    background-color: var(--white);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .15);
+  }
+  
+  /*----heading and description-----*/
+  
+  .info {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  /*----input-fields------*/
+  
+  .form .input_fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .form .input_fields input {
+    height: 2rem;
+    width: 2rem;
+    outline: none;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--ch-black);
+    border-radius: 5px;
+    border: 2.5px solid var(--ch-white);
+    background-color: var(--ch-white);
+  }
+  
+  .form .input_fields input:focus {
+    border: 1px solid var(--night-rider);
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .15);
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  
+  /*-----verify and clear buttons-----*/
+  
+  .action_btns {
+    display: flex;
+    margin-top: 20px;
+    gap: 0.5rem;
+  }
+  
+  .btn {
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to bottom, var(--fancy-button-gradient-0) 0%, var(--fancy-button-gradient-50) 50%, var(--fancy-button-gradient-100) 100%);
+    box-shadow: 0px 4px 12px rgba(9, 12, 60, 0.15), 0px 2px 8px rgba(9, 12, 60, 0.15), 0px 1px 3px var(--fancy-button-inner-shadow-top-lg), inset 0px 1px 1px var(--fancy-button-inner-shadow-top), inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+  }
+  
+  .btn:before, .btn:after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+  }
+  
+  .btn:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: opacity 0.25s;
+  }
+  
+  .btn:after {
+    inset: 0;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--fancy-button-shine-top), transparent 8px);
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .btn span:before, .btn span:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--fancy-button-shine-bottom);
+    transition: opacity 0.25s, transform 0.25s;
+    will-change: transform;
+  }
+  
+  .btn span:before {
+    width: 92px;
+    height: 8px;
+    bottom: -4px;
+    opacity: 0.75;
+    filter: blur(6px);
+  }
+  
+  .btn span:after {
+    width: 112px;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+  
+  .btn:hover span:before {
+    opacity: 0.8;
+  }
+  
+  .btn:hover span:before {
+    transform: translateX(-50%) scale(1.25);
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+  }
+  
+  .clear {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--night-rider);
+    text-shadow: none;
+    background: transparent;
+    border: 1px solid var(--night-rider);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  
+  .clear:hover,.clear:focus {
+    color: var(--tomato);
+    background-color: var(--white);
+    border: 1px solid var(--tomato);
+  }
+  
+  /*-----close button------*/
+  
+  /* .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: var(--ch-white);
+    color: var(--af-white);
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease;
+  }
+  
+  .close:hover {
+    background-color: var(--tomato);
+    color: var(--white);
+  } */

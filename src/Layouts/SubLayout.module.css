@@ -1,0 +1,21 @@
+.container{
+    /* padding: 2rem;  */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sub_container{
+    background-color: #ab7bfc45;
+    box-shadow: rgb(145 218 247) 0px 2px 8px 0px;
+    width: 80%;
+    padding: 2rem;
+    min-height: 70dvh;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

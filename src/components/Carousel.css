@@ -1,0 +1,243 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #070606;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .gradient-bg {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+} */
+
+/* .gradient-bg {
+  background: rgb(46, 49, 146);
+  background: radial-gradient(circle, rgba(46, 49, 146, 1) 0%, rgba(27, 255, 255, 1) 100%);
+} */
+
+/* ================ */
+/* .gradient-bg {
+  background: linear-gradient(to right, #9600FF     , #AEBBF7);
+} */
+
+.gradient-bg {
+  background: linear-gradient(to right, #2373CF     , #AFBAF8);
+}
+
+.dropdown-item:hover {
+
+  background: linear-gradient(to right,  #2373CF , #AFBAF8);
+}
+.gradient-text {
+
+  background: linear-gradient(to right,  #2373CF , #AFBAF8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.slick-next {
+  /* right: 14px !important;
+  z-index: 99; */
+  display: none !important;
+
+}
+
+.heading-text {
+  overflow-wrap: anywhere;
+  hyphens: auto;  /* Optional: for better handling of word breaks */
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev {
+  /* left: 14px !important;
+  z-index: 99; */
+  display: none !important;
+}
+
+/* Flip card styles */
+.flip-card {
+  perspective: 1000px;
+  /* width: 300px; */
+  height: 250px;  /* Decreased height for the card */
+  overflow: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #000;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;   
+}
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: #fff;    
+  cursor: pointer;
+}
+
+.flip-card-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);  /* Black with 60% transparency for overlay effect */
+  z-index: 1;  /* Ensure it's above the image but below the button */
+}
+
+/* Centering the button on the flip card back */
+.flip-card-back .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures the play icon is on top of the overlay */
+}
+
+.play-icon button {
+  background: linear-gradient(to right,  #2373CF , #AFBAF8);
+  color: #fff; /* White text color */
+  border: none; /* Remove borders */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s; /* Smooth background change on hover */
+  z-index: 2; /* Ensures the button is on top of the overlay */
+}
+
+/* .play-icon button:hover {
+  background-color: #d00; 
+} */
+
+/* Ensures flip card contents are stacked correctly */
+.flip-card-front, .flip-card-back {
+  z-index: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.pagination li a {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: white;
+  transition: background-color .3s;
+}
+
+.pagination li a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.pagination li.active a {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pagination li a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .pagination {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .pagination li a {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+
+
